@@ -1,0 +1,30 @@
+server:
+  port: 8083
+
+spring:
+  jooq:
+    sql-dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/internetstore
+    username: admin
+    password: admin
+
+  flyway:
+    baselineOnMigrate: true
+    url: jdbc:postgresql://localhost:5432/internetstore?ssl=false
+    user: admin
+    password: admin
+    schemas:
+      - "public"
+    locations:
+      - classpath:/migrations/
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: ".html"
