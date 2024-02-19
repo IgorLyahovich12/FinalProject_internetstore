@@ -2,16 +2,14 @@
 package edu.lemon.internetstore.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.BatchSize;
 
 import java.util.UUID;
 
 
-@Data
+@Setter
+@Getter
 @Builder
 @Entity
 @NoArgsConstructor
@@ -23,15 +21,15 @@ public final class Favorites {
     @Column(name = "favorites_id")
     private UUID favorites_id;
 
-//    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    @JoinColumn(name = "user_id")
-//    @BatchSize(size = 20)
-//    private User user;
-//
-//    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    @JoinColumn(name = "product_id")
-//    @BatchSize(size = 20)
-//    private Product product;
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id",referencedColumnName = "user_id")
+    @BatchSize(size = 20)
+    private User user;
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "product_id",referencedColumnName = "product_id")
+    @BatchSize(size = 20)
+    private Product products;
 
 
 }

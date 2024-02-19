@@ -10,6 +10,5 @@ public record ProvidersDTO (
         UUID provider_id,
         String name_company,
         String country
-//        Set<ProductsDTO> products
 )
 {}

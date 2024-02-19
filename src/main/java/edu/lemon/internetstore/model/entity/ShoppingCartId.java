@@ -1,15 +1,14 @@
-//package edu.lemon.internetstore.model.entity;
-//
-//import lombok.AllArgsConstructor;
-//import lombok.Data;
-//import lombok.NoArgsConstructor;
-//
-//import java.io.Serializable;
-//
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
-//public class ShoppingCartId implements Serializable {
-//    private Product product;
-//    private User user;
-//}
+package edu.lemon.internetstore.model.entity;
+
+import lombok.*;
+
+import java.io.Serializable;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class ShoppingCartId implements Serializable {
+    private Product products;
+    private User user;
+}

@@ -1,13 +1,13 @@
 package edu.lemon.internetstore.web.dto;
 
-import lombok.Builder;
 
+import edu.lemon.internetstore.model.entity.Product;
+import edu.lemon.internetstore.model.entity.User;
 
 import java.util.UUID;
-@Builder
+
 public record FavoritesDTO(
-        UUID favorites_id
-//        UserDTO userDTO,
-//        ProductsDTO productDTO
-) {
-}
+        UUID favorites_id,
+        User user,
+        Product products
+) {}

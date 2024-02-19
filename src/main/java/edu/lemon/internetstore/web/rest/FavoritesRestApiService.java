@@ -17,7 +17,7 @@ public class FavoritesRestApiService {
         this.favoritesService = favoritesService;
     }
     @GetMapping
-    public ResponseEntity<List<FavoritesDTO>> getOrders() {
+    public ResponseEntity<List<FavoritesDTO>> getFavorites() {
         return ResponseEntity.ok(favoritesService.getFavorites());
     }
 }

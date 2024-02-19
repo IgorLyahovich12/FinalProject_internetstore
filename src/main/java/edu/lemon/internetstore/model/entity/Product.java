@@ -1,23 +1,20 @@
 package edu.lemon.internetstore.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.BatchSize;
-import lombok.EqualsAndHashCode;
 
 import java.util.Set;
 import java.util.UUID;
 
-@Data
+@Setter
+@Getter
 @Builder
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "product")
-//@EqualsAndHashCode(exclude = {"categories", "reviews", "favorites", "shoppingCarts"})
 public final class Product {
     @Id
     @GeneratedValue
@@ -25,7 +22,7 @@ public final class Product {
     private UUID product_id;
 
     @Column(name = "name_product")
-    private String nameProduct;
+    private String name_product;
 
     @Column(name = "description", length = 10000)
     private String description;
@@ -36,23 +33,13 @@ public final class Product {
     @Column(name = "stock_quantity")
     private int stock_quantity;
 
-//    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "products")
-//    @BatchSize(size = 20)
-//    private Set<Provider> providers;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "products")
+    @BatchSize(size = 20)
 
-//    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "products")
-//    @BatchSize(size = 20)
-//    private Set<Categories> categories;
-//
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "product")
-//    @BatchSize(size = 20)
-//    private Set<Reviews> reviews;
-//
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "product")
-//    @BatchSize(size = 20)
-//    private Set<Favorites> favorites;
+    private Set<Provider> providers;
 
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "product")
-//    @BatchSize(size = 20)
-//    private Set<ShoppingCart> shoppingCarts;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "products")
+    @BatchSize(size = 20)
+
+    private Set<Categories> categories;
 }

@@ -1,14 +1,13 @@
-//package edu.lemon.internetstore.web.dto;
-//
-//import lombok.Builder;
-//
-//
-//import java.time.LocalDate;
-//@Builder
-//public record ShoppingCartDTO (
-//      ProductsDTO productsDTO,
-//        UserDTO userDTO,
-//        LocalDate date,
-//        int quantity
-//){
-//}
+package edu.lemon.internetstore.web.dto;
+
+import edu.lemon.internetstore.model.entity.Product;
+import edu.lemon.internetstore.model.entity.User;
+
+import java.time.LocalDate;
+
+public record ShoppingCartDTO(
+        Product products,
+        User user,
+        LocalDate date,
+        int quantity
+) {}

@@ -1,17 +1,15 @@
 package edu.lemon.internetstore.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.BatchSize;
 
 import java.time.LocalDate;
 import java.util.Set;
 import java.util.UUID;
 
-@Data
+@Setter
+@Getter
 @Builder
 @Entity
 @NoArgsConstructor
@@ -36,25 +34,12 @@ public final class User {
     private LocalDate date;
 
     @Column(name = "total_purchase_amount")
-    private double totalAmountBuy;
+    private double total_amount_buy;
 
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
-//    @BatchSize(size = 20)
-//    private Set<Favorites> favorites;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "bonus_points_id", referencedColumnName = "bonus_points_id")
     private BonusPoints bonusPoints;
 
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
-//    @BatchSize(size = 20)
-//    private Set<Reviews> reviews;
-//
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
-//    @BatchSize(size = 20)
-//    private Set<Orders> orders;
 
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
-//    @BatchSize(size = 20)
-//    private Set<ShoppingCart> shoppingCarts;
 }

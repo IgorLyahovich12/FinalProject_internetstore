@@ -1,16 +1,14 @@
 package edu.lemon.internetstore.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.BatchSize;
 
 import java.util.Set;
 import java.util.UUID;
 
-@Data
+@Setter
+@Getter
 @Builder
 @Entity
 @NoArgsConstructor
@@ -24,17 +22,20 @@ public final class Categories {
     private UUID categories_id;
 
     @Column(name = "name_categories")
-    private String nameCategories;
+    private String name_categories;
 
     @Column(name = "description", length = 10000)
     private String description;
 
-//    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    @JoinTable(
-//            name = "Product_Categories",
-//            joinColumns = @JoinColumn(name = "categories_id"),
-//            inverseJoinColumns = @JoinColumn(name = "product_id")
-//    )
-//    @BatchSize(size = 20)
-//    private Set<Product> products;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "product_categories",
+            joinColumns = @JoinColumn(name = "categories_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id")
+    )
+    @BatchSize(size = 20)
+    private Set<Product> products;
+
+
+
 }

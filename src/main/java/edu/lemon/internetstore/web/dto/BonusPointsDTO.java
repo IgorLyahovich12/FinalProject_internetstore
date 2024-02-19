@@ -5,9 +5,9 @@ import lombok.Builder;
 import java.util.UUID;
 @Builder
 public record BonusPointsDTO (
-        UUID bonus_point_id,
-        int points,
-        UserDTO userDTO
+        UUID bonus_points_id,
+        int points
+
 )
 {
 }

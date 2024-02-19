@@ -65,20 +65,20 @@ VALUES ('Smartphones',
        ('Kitchen appliances', 'Innovative kitchen gadgets and appliances to simplify cooking and food preparation.'),
        ('For gamers', 'Products and accessories specifically tailored for gamers, including gaming consoles, peripherals, gaming chairs, and more.');
 
--- --Додавання даних до таблиці Provider
--- INSERT INTO provider (name_company, country)
--- VALUES ('TechSupplier', 'USA'),
---        ('TechWarehouse', 'USA'),
---        ('GadgetEmporium', 'China'),
---        ('PCParadise', 'China'),
---        ('ElectroMart', 'Germany'),
---        ('HomeTechSolutions', 'Germany'),
---        ('KitchenTech', 'Italy'),
---        ('CulinaryAppliances', 'Italy'),
---        ('GameMaster', 'Japan'),
---        ('GamerZone', 'Japan');
---
---
+--Додавання даних до таблиці Provider
+INSERT INTO provider (name_company, country)
+VALUES ('TechSupplier', 'USA'),
+       ('TechWarehouse', 'USA'),
+       ('GadgetEmporium', 'China'),
+       ('PCParadise', 'China'),
+       ('ElectroMart', 'Germany'),
+       ('HomeTechSolutions', 'Germany'),
+       ('KitchenTech', 'Italy'),
+       ('CulinaryAppliances', 'Italy'),
+       ('GameMaster', 'Japan'),
+       ('GamerZone', 'Japan');
+
+
 -- -- Додавання даних до таблиці Product
 INSERT INTO product (name_product, description, price, stock_quantity)
 VALUES ('iPhone 13 Pro', 'The latest flagship smartphone from Apple with advanced features and stunning design',
@@ -129,201 +129,201 @@ VALUES ('iPhone 13 Pro', 'The latest flagship smartphone from Apple with advance
        ('DJI Mavic Air 2', 'Compact drone with 4K camera and intelligent flight modes', 799.99, 10);
 
 
---
--- INSERT INTO product_categories (product_id, categories_id)
--- VALUES
---
---     ((SELECT * FROM get_id_from_table(0, 'product', 'product_id')), (SELECT * FROM get_id_from_table(0, 'categories', 'categories_id'))),
---     ((SELECT * FROM get_id_from_table(1, 'product', 'product_id')), (SELECT * FROM get_id_from_table(1, 'categories', 'categories_id'))),
---     ((SELECT * FROM get_id_from_table(2, 'product', 'product_id')), (SELECT * FROM get_id_from_table(2, 'categories', 'categories_id'))),
---     ((SELECT * FROM get_id_from_table(3, 'product', 'product_id')), (SELECT * FROM get_id_from_table(3, 'categories', 'categories_id'))),
---     ((SELECT * FROM get_id_from_table(4, 'product', 'product_id')), (SELECT * FROM get_id_from_table(4, 'categories', 'categories_id'))),
---     ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(6, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(7, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(8, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(9, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(10, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(11, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(12, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(13, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(14, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(15, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(16, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(17, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(18, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(19, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(20, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(21, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(22, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(23, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(24, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(25, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(26, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(27, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(28, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(29, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(30, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(31, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(32, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(33, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
---     ((SELECT * FROM get_id_from_table(34, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id')));
---
+
+INSERT INTO product_categories (product_id, categories_id)
+VALUES
+
+    ((SELECT * FROM get_id_from_table(0, 'product', 'product_id')), (SELECT * FROM get_id_from_table(0, 'categories', 'categories_id'))),
+    ((SELECT * FROM get_id_from_table(1, 'product', 'product_id')), (SELECT * FROM get_id_from_table(1, 'categories', 'categories_id'))),
+    ((SELECT * FROM get_id_from_table(2, 'product', 'product_id')), (SELECT * FROM get_id_from_table(2, 'categories', 'categories_id'))),
+    ((SELECT * FROM get_id_from_table(3, 'product', 'product_id')), (SELECT * FROM get_id_from_table(3, 'categories', 'categories_id'))),
+    ((SELECT * FROM get_id_from_table(4, 'product', 'product_id')), (SELECT * FROM get_id_from_table(4, 'categories', 'categories_id'))),
+    ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(6, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(7, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(8, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(9, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(10, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(11, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(12, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(13, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(14, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(15, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(16, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(17, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(18, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(19, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(20, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(21, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(22, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(23, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(24, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(25, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(26, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(27, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(28, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(29, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(30, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(31, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(32, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(33, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'categories','categories_id'))),
+    ((SELECT * FROM get_id_from_table(34, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'categories','categories_id')));
 
 
---
---
---
---
--- INSERT INTO product_provider ( product_id,provider_id)
--- VALUES
---     ((SELECT * FROM get_id_from_table(0, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(1, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(2, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(3, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(6, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(7, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(8, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(9, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(10, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(11, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(12, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(13, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(14, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(15, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(16, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(17, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(18, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(19, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(20, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(21, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(22, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(23, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(24, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(25, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(26, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(27, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(28, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(29, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(30, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(31, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(32, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(33, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
---     ((SELECT * FROM get_id_from_table(34, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'provider','provider_id')));
---
---
--- --Додавання даних до таблиці Favoritesapp_user
--- INSERT INTO Favorites (product_id,user_id)
--- VALUES      ((SELECT * FROM get_id_from_table(0, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(1, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(2, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(3, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(8, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(9, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(12, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(12, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(6, 'product','product_id')), (SELECT * FROM get_id_from_table(13, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(7, 'product','product_id')), (SELECT * FROM get_id_from_table(14, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(8, 'product','product_id')), (SELECT * FROM get_id_from_table(15, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(9, 'product','product_id')), (SELECT * FROM get_id_from_table(11, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(10, 'product','product_id')), (SELECT * FROM get_id_from_table(10, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(11, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(12, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(13, 'product','product_id')), (SELECT * FROM get_id_from_table(9, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(14, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(15, 'product','product_id')), (SELECT * FROM get_id_from_table(8, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(16, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(17, 'product','product_id')), (SELECT * FROM get_id_from_table(7, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(18, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(19, 'product','product_id')), (SELECT * FROM get_id_from_table(8, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(20, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(21, 'product','product_id')), (SELECT * FROM get_id_from_table(11, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(22, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(23, 'product','product_id')), (SELECT * FROM get_id_from_table(10, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(24, 'product','product_id')), (SELECT * FROM get_id_from_table(14, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(25, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(26, 'product','product_id')), (SELECT * FROM get_id_from_table(12, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(27, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(28, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(29, 'product','product_id')), (SELECT * FROM get_id_from_table(13, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(30, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(31, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(32, 'product','product_id')), (SELECT * FROM get_id_from_table(15, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(33, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
---             ((SELECT * FROM get_id_from_table(34, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'app_user','user_id')));
---
---
---
--- -- Додавання даних до таблиці Orders
--- INSERT INTO orders (product_id,user_id,order_status,  order_date)
--- VALUES ((SELECT * FROM get_id_from_table(0, 'product','product_id')),(SELECT * FROM get_id_from_table(1, 'app_user','user_id')),'pending',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(2, 'product','product_id')),(SELECT * FROM get_id_from_table(2, 'app_user','user_id')),'completed',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(3, 'product','product_id')),(SELECT * FROM get_id_from_table(3, 'app_user','user_id')),'pending',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(4, 'product','product_id')),(SELECT * FROM get_id_from_table(4, 'app_user','user_id')),'completed',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(6, 'product','product_id')),(SELECT * FROM get_id_from_table(5, 'app_user','user_id')),'pending',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(7, 'product','product_id')),(SELECT * FROM get_id_from_table(6, 'app_user','user_id')),'completed',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(8, 'product','product_id')),(SELECT * FROM get_id_from_table(7, 'app_user','user_id')),'pending',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(9, 'product','product_id')),(SELECT * FROM get_id_from_table(8, 'app_user','user_id')),'completed',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(2, 'product','product_id')),(SELECT * FROM get_id_from_table(9, 'app_user','user_id')),'pending',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(3, 'product','product_id')),(SELECT * FROM get_id_from_table(10, 'app_user','user_id')),'completed',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(6, 'product','product_id')),(SELECT * FROM get_id_from_table(11, 'app_user','user_id')),'pending',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(4, 'product','product_id')),(SELECT * FROM get_id_from_table(12, 'app_user','user_id')),'completed',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(6, 'product','product_id')),(SELECT * FROM get_id_from_table(14, 'app_user','user_id')),'pending',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(7, 'product','product_id')),(SELECT * FROM get_id_from_table(13, 'app_user','user_id')),'completed',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(8, 'product','product_id')),(SELECT * FROM get_id_from_table(0, 'app_user','user_id')),'pending',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(33, 'product','product_id')),(SELECT * FROM get_id_from_table(2, 'app_user','user_id')),'completed',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(31, 'product','product_id')),(SELECT * FROM get_id_from_table(3, 'app_user','user_id')),'pending',  '2024-02-09'),
---        ((SELECT * FROM get_id_from_table(12, 'product','product_id')),(SELECT * FROM get_id_from_table(4, 'app_user','user_id')),'completed',  '2024-02-09');
---
---
--- INSERT INTO reviews (product_id,user_id,rating, comment)
--- VALUES
---     ((SELECT * FROM get_id_from_table(3, 'product','product_id')),(SELECT * FROM get_id_from_table(1, 'app_user','user_id')),4, 'Good value for the price.'),
---     ((SELECT * FROM get_id_from_table(12, 'product','product_id')),(SELECT * FROM get_id_from_table(2, 'app_user','user_id')),3, 'Average product, nothing special.'),
---     ((SELECT * FROM get_id_from_table(11, 'product','product_id')),(SELECT * FROM get_id_from_table(3, 'app_user','user_id')),5, 'Love it! Best purchase ever.'),
---     ((SELECT * FROM get_id_from_table(14, 'product','product_id')),(SELECT * FROM get_id_from_table(4, 'app_user','user_id')),4, 'Good quality, fast delivery.'),
---     ((SELECT * FROM get_id_from_table(15, 'product','product_id')),(SELECT * FROM get_id_from_table(5, 'app_user','user_id')),5, 'Amazing product, highly recommend!'),
---     ((SELECT * FROM get_id_from_table(16, 'product','product_id')),(SELECT * FROM get_id_from_table(6, 'app_user','user_id')),3, 'Not as expected, had some issues.'),
---     ((SELECT * FROM get_id_from_table(17, 'product','product_id')),(SELECT * FROM get_id_from_table(7, 'app_user','user_id')),5, 'Great customer service, very satisfied.'),
---     ((SELECT * FROM get_id_from_table(18, 'product','product_id')),(SELECT * FROM get_id_from_table(8, 'app_user','user_id')),4, 'Nice product, good value for money.'),
---     ((SELECT * FROM get_id_from_table(19, 'product','product_id')),(SELECT * FROM get_id_from_table(9, 'app_user','user_id')),5, 'Absolutely love it! Great purchase.'),
---     ((SELECT * FROM get_id_from_table(2,'product','product_id')),(SELECT * FROM get_id_from_table(10, 'app_user','user_id')),2, 'Disappointed with the quality.'),
---     ((SELECT * FROM get_id_from_table(1, 'product','product_id')),(SELECT * FROM get_id_from_table(11, 'app_user','user_id')),5, 'Excellent product, exceeded expectations.'),
---     ((SELECT * FROM get_id_from_table(4, 'product','product_id')),(SELECT * FROM get_id_from_table(12,'app_user','user_id')),4, 'Good quality, fast shipping.'),
---     ((SELECT * FROM get_id_from_table(5, 'product','product_id')),(SELECT * FROM get_id_from_table(13, 'app_user','user_id')),5, 'Very satisfied with the purchase!'),
---     ((SELECT * FROM get_id_from_table(6, 'product','product_id')),(SELECT * FROM get_id_from_table(14, 'app_user','user_id')),3, 'Not bad, but could be better.'),
---     ((SELECT * FROM get_id_from_table(20, 'product','product_id')),(SELECT * FROM get_id_from_table(15, 'app_user','user_id')),5, 'Amazing product, highly recommend!'),
---     ((SELECT * FROM get_id_from_table(21, 'product','product_id')),(SELECT * FROM get_id_from_table(1, 'app_user','user_id')),4, 'Good quality, fast delivery.'),
---     ((SELECT * FROM get_id_from_table(22, 'product','product_id')),(SELECT * FROM get_id_from_table(2, 'app_user','user_id')),3, 'Average product, nothing special.'),
---     ((SELECT * FROM get_id_from_table(26, 'product','product_id')),(SELECT * FROM get_id_from_table(3, 'app_user','user_id')),5, 'Love it! Best purchase ever.'),
---     ((SELECT * FROM get_id_from_table(29, 'product','product_id')),(SELECT * FROM get_id_from_table(4, 'app_user','user_id')),4, 'Good quality, fast shipping.'),
---     ((SELECT * FROM get_id_from_table(30, 'product','product_id')),(SELECT * FROM get_id_from_table(5, 'app_user','user_id')),5, 'Very satisfied with the purchase!'),
---     ((SELECT * FROM get_id_from_table(8, 'product','product_id')),(SELECT * FROM get_id_from_table(6, 'app_user','user_id')),3, 'Not bad, but could be better.');
---
 
--- INSERT INTO shopping_cart (user_id,product_id,date_cart, quantity)
--- VALUES ((SELECT get_id_from_table(0, 'app_user','user_id')), (SELECT get_id_from_table(0, 'product','product_id')), NOW()::timestamp, 1),
---        ((SELECT get_id_from_table(1, 'app_user','user_id')), (SELECT get_id_from_table(1, 'product','product_id')), NOW()::timestamp, 2),
---        ((SELECT get_id_from_table(3, 'app_user','user_id')), (SELECT get_id_from_table(2, 'product','product_id')), NOW()::timestamp, 3),
---        ((SELECT get_id_from_table(4, 'app_user','user_id')), (SELECT get_id_from_table(3, 'product','product_id')), NOW()::timestamp, 4),
---        ((SELECT get_id_from_table(3, 'app_user','user_id')), (SELECT get_id_from_table(4, 'product','product_id')), NOW()::timestamp, 5),
---        ((SELECT get_id_from_table(6, 'app_user','user_id')), (SELECT get_id_from_table(5, 'product','product_id')), NOW()::timestamp, 2),
---        ((SELECT get_id_from_table(7, 'app_user','user_id')), (SELECT get_id_from_table(6, 'product','product_id')), NOW()::timestamp, 1),
---        ((SELECT get_id_from_table(8, 'app_user','user_id')), (SELECT get_id_from_table(17, 'product','product_id')), NOW()::timestamp, 2),
---        ((SELECT get_id_from_table(9, 'app_user','user_id')), (SELECT get_id_from_table(7, 'product','product_id')), NOW()::timestamp, 3),
---        ((SELECT get_id_from_table(10, 'app_user','user_id')), (SELECT get_id_from_table(8, 'product','product_id')), NOW()::timestamp, 4),
---        ((SELECT get_id_from_table(11, 'app_user','user_id')), (SELECT get_id_from_table(9, 'product','product_id')), NOW()::timestamp, 5),
---        ((SELECT get_id_from_table(12, 'app_user','user_id')), (SELECT get_id_from_table(10, 'product','product_id')), NOW()::timestamp, 2),
---        ((SELECT get_id_from_table(14, 'app_user','user_id')), (SELECT get_id_from_table(11, 'product','product_id')), NOW()::timestamp, 1),
---        ((SELECT get_id_from_table(13, 'app_user','user_id')), (SELECT get_id_from_table(12, 'product','product_id')), NOW()::timestamp, 2),
---        ((SELECT get_id_from_table(15, 'app_user','user_id')), (SELECT get_id_from_table(13, 'product','product_id')), NOW()::timestamp, 3),
---        ((SELECT get_id_from_table(4, 'app_user','user_id')), (SELECT get_id_from_table(14, 'product','product_id')), NOW()::timestamp, 4),
---        ((SELECT get_id_from_table(3, 'app_user','user_id')), (SELECT get_id_from_table(15, 'product','product_id')), NOW()::timestamp, 5),
---        ((SELECT get_id_from_table(2, 'app_user','user_id')), (SELECT get_id_from_table(16, 'product','product_id')), NOW()::timestamp, 2);
---
+
+
+
+
+INSERT INTO product_provider ( product_id,provider_id)
+VALUES
+    ((SELECT * FROM get_id_from_table(0, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(1, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(2, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(3, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(6, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(7, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(8, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(9, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(10, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(11, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(12, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(13, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(14, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(15, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(16, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(17, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(18, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(19, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(20, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(21, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(22, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(23, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(24, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(25, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(26, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(27, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(28, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(29, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(30, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(31, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(32, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(33, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'provider','provider_id'))),
+    ((SELECT * FROM get_id_from_table(34, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'provider','provider_id')));
+
+
+--Додавання даних до таблиці Favoritesapp_user
+INSERT INTO favorites (product_id,user_id)
+VALUES      ((SELECT * FROM get_id_from_table(0, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(1, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(2, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(3, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(8, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(9, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(4, 'product','product_id')), (SELECT * FROM get_id_from_table(12, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(5, 'product','product_id')), (SELECT * FROM get_id_from_table(12, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(6, 'product','product_id')), (SELECT * FROM get_id_from_table(13, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(7, 'product','product_id')), (SELECT * FROM get_id_from_table(14, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(8, 'product','product_id')), (SELECT * FROM get_id_from_table(15, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(9, 'product','product_id')), (SELECT * FROM get_id_from_table(11, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(10, 'product','product_id')), (SELECT * FROM get_id_from_table(10, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(11, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(12, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(13, 'product','product_id')), (SELECT * FROM get_id_from_table(9, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(14, 'product','product_id')), (SELECT * FROM get_id_from_table(2, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(15, 'product','product_id')), (SELECT * FROM get_id_from_table(8, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(16, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(17, 'product','product_id')), (SELECT * FROM get_id_from_table(7, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(18, 'product','product_id')), (SELECT * FROM get_id_from_table(3, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(19, 'product','product_id')), (SELECT * FROM get_id_from_table(8, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(20, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(21, 'product','product_id')), (SELECT * FROM get_id_from_table(11, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(22, 'product','product_id')), (SELECT * FROM get_id_from_table(6, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(23, 'product','product_id')), (SELECT * FROM get_id_from_table(10, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(24, 'product','product_id')), (SELECT * FROM get_id_from_table(14, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(25, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(26, 'product','product_id')), (SELECT * FROM get_id_from_table(12, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(27, 'product','product_id')), (SELECT * FROM get_id_from_table(5, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(28, 'product','product_id')), (SELECT * FROM get_id_from_table(4, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(29, 'product','product_id')), (SELECT * FROM get_id_from_table(13, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(30, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(31, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(32, 'product','product_id')), (SELECT * FROM get_id_from_table(15, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(33, 'product','product_id')), (SELECT * FROM get_id_from_table(1, 'app_user','user_id'))),
+            ((SELECT * FROM get_id_from_table(34, 'product','product_id')), (SELECT * FROM get_id_from_table(0, 'app_user','user_id')));
+
+
+
+-- Додавання даних до таблиці Orders
+INSERT INTO orders (product_id,user_id,order_status,  order_date)
+VALUES ((SELECT * FROM get_id_from_table(0, 'product','product_id')),(SELECT * FROM get_id_from_table(1, 'app_user','user_id')),'pending',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(2, 'product','product_id')),(SELECT * FROM get_id_from_table(2, 'app_user','user_id')),'completed',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(3, 'product','product_id')),(SELECT * FROM get_id_from_table(3, 'app_user','user_id')),'pending',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(4, 'product','product_id')),(SELECT * FROM get_id_from_table(4, 'app_user','user_id')),'completed',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(6, 'product','product_id')),(SELECT * FROM get_id_from_table(5, 'app_user','user_id')),'pending',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(7, 'product','product_id')),(SELECT * FROM get_id_from_table(6, 'app_user','user_id')),'completed',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(8, 'product','product_id')),(SELECT * FROM get_id_from_table(7, 'app_user','user_id')),'pending',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(9, 'product','product_id')),(SELECT * FROM get_id_from_table(8, 'app_user','user_id')),'completed',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(2, 'product','product_id')),(SELECT * FROM get_id_from_table(9, 'app_user','user_id')),'pending',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(3, 'product','product_id')),(SELECT * FROM get_id_from_table(10, 'app_user','user_id')),'completed',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(6, 'product','product_id')),(SELECT * FROM get_id_from_table(11, 'app_user','user_id')),'pending',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(4, 'product','product_id')),(SELECT * FROM get_id_from_table(12, 'app_user','user_id')),'completed',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(6, 'product','product_id')),(SELECT * FROM get_id_from_table(14, 'app_user','user_id')),'pending',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(7, 'product','product_id')),(SELECT * FROM get_id_from_table(13, 'app_user','user_id')),'completed',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(8, 'product','product_id')),(SELECT * FROM get_id_from_table(0, 'app_user','user_id')),'pending',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(33, 'product','product_id')),(SELECT * FROM get_id_from_table(2, 'app_user','user_id')),'completed',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(31, 'product','product_id')),(SELECT * FROM get_id_from_table(3, 'app_user','user_id')),'pending',  '2024-02-09'),
+       ((SELECT * FROM get_id_from_table(12, 'product','product_id')),(SELECT * FROM get_id_from_table(4, 'app_user','user_id')),'completed',  '2024-02-09');
+
+
+INSERT INTO reviews (product_id,user_id,rating, comment)
+VALUES
+    ((SELECT * FROM get_id_from_table(3, 'product','product_id')),(SELECT * FROM get_id_from_table(1, 'app_user','user_id')),4, 'Good value for the price.'),
+    ((SELECT * FROM get_id_from_table(12, 'product','product_id')),(SELECT * FROM get_id_from_table(2, 'app_user','user_id')),3, 'Average product, nothing special.'),
+    ((SELECT * FROM get_id_from_table(11, 'product','product_id')),(SELECT * FROM get_id_from_table(3, 'app_user','user_id')),5, 'Love it! Best purchase ever.'),
+    ((SELECT * FROM get_id_from_table(14, 'product','product_id')),(SELECT * FROM get_id_from_table(4, 'app_user','user_id')),4, 'Good quality, fast delivery.'),
+    ((SELECT * FROM get_id_from_table(15, 'product','product_id')),(SELECT * FROM get_id_from_table(5, 'app_user','user_id')),5, 'Amazing product, highly recommend!'),
+    ((SELECT * FROM get_id_from_table(16, 'product','product_id')),(SELECT * FROM get_id_from_table(6, 'app_user','user_id')),3, 'Not as expected, had some issues.'),
+    ((SELECT * FROM get_id_from_table(17, 'product','product_id')),(SELECT * FROM get_id_from_table(7, 'app_user','user_id')),5, 'Great customer service, very satisfied.'),
+    ((SELECT * FROM get_id_from_table(18, 'product','product_id')),(SELECT * FROM get_id_from_table(8, 'app_user','user_id')),4, 'Nice product, good value for money.'),
+    ((SELECT * FROM get_id_from_table(19, 'product','product_id')),(SELECT * FROM get_id_from_table(9, 'app_user','user_id')),5, 'Absolutely love it! Great purchase.'),
+    ((SELECT * FROM get_id_from_table(2,'product','product_id')),(SELECT * FROM get_id_from_table(10, 'app_user','user_id')),2, 'Disappointed with the quality.'),
+    ((SELECT * FROM get_id_from_table(1, 'product','product_id')),(SELECT * FROM get_id_from_table(11, 'app_user','user_id')),5, 'Excellent product, exceeded expectations.'),
+    ((SELECT * FROM get_id_from_table(4, 'product','product_id')),(SELECT * FROM get_id_from_table(12,'app_user','user_id')),4, 'Good quality, fast shipping.'),
+    ((SELECT * FROM get_id_from_table(5, 'product','product_id')),(SELECT * FROM get_id_from_table(13, 'app_user','user_id')),5, 'Very satisfied with the purchase!'),
+    ((SELECT * FROM get_id_from_table(6, 'product','product_id')),(SELECT * FROM get_id_from_table(14, 'app_user','user_id')),3, 'Not bad, but could be better.'),
+    ((SELECT * FROM get_id_from_table(20, 'product','product_id')),(SELECT * FROM get_id_from_table(15, 'app_user','user_id')),5, 'Amazing product, highly recommend!'),
+    ((SELECT * FROM get_id_from_table(21, 'product','product_id')),(SELECT * FROM get_id_from_table(1, 'app_user','user_id')),4, 'Good quality, fast delivery.'),
+    ((SELECT * FROM get_id_from_table(22, 'product','product_id')),(SELECT * FROM get_id_from_table(2, 'app_user','user_id')),3, 'Average product, nothing special.'),
+    ((SELECT * FROM get_id_from_table(26, 'product','product_id')),(SELECT * FROM get_id_from_table(3, 'app_user','user_id')),5, 'Love it! Best purchase ever.'),
+    ((SELECT * FROM get_id_from_table(29, 'product','product_id')),(SELECT * FROM get_id_from_table(4, 'app_user','user_id')),4, 'Good quality, fast shipping.'),
+    ((SELECT * FROM get_id_from_table(30, 'product','product_id')),(SELECT * FROM get_id_from_table(5, 'app_user','user_id')),5, 'Very satisfied with the purchase!'),
+    ((SELECT * FROM get_id_from_table(8, 'product','product_id')),(SELECT * FROM get_id_from_table(6, 'app_user','user_id')),3, 'Not bad, but could be better.');
+
+
+INSERT INTO shopping_cart (user_id,product_id,date_cart, quantity)
+VALUES ((SELECT get_id_from_table(0, 'app_user','user_id')), (SELECT get_id_from_table(0, 'product','product_id')), NOW()::timestamp, 1),
+       ((SELECT get_id_from_table(1, 'app_user','user_id')), (SELECT get_id_from_table(1, 'product','product_id')), NOW()::timestamp, 2),
+       ((SELECT get_id_from_table(3, 'app_user','user_id')), (SELECT get_id_from_table(2, 'product','product_id')), NOW()::timestamp, 3),
+       ((SELECT get_id_from_table(4, 'app_user','user_id')), (SELECT get_id_from_table(3, 'product','product_id')), NOW()::timestamp, 4),
+       ((SELECT get_id_from_table(3, 'app_user','user_id')), (SELECT get_id_from_table(4, 'product','product_id')), NOW()::timestamp, 5),
+       ((SELECT get_id_from_table(6, 'app_user','user_id')), (SELECT get_id_from_table(5, 'product','product_id')), NOW()::timestamp, 2),
+       ((SELECT get_id_from_table(7, 'app_user','user_id')), (SELECT get_id_from_table(6, 'product','product_id')), NOW()::timestamp, 1),
+       ((SELECT get_id_from_table(8, 'app_user','user_id')), (SELECT get_id_from_table(17, 'product','product_id')), NOW()::timestamp, 2),
+       ((SELECT get_id_from_table(9, 'app_user','user_id')), (SELECT get_id_from_table(7, 'product','product_id')), NOW()::timestamp, 3),
+       ((SELECT get_id_from_table(10, 'app_user','user_id')), (SELECT get_id_from_table(8, 'product','product_id')), NOW()::timestamp, 4),
+       ((SELECT get_id_from_table(11, 'app_user','user_id')), (SELECT get_id_from_table(9, 'product','product_id')), NOW()::timestamp, 5),
+       ((SELECT get_id_from_table(12, 'app_user','user_id')), (SELECT get_id_from_table(10, 'product','product_id')), NOW()::timestamp, 2),
+       ((SELECT get_id_from_table(14, 'app_user','user_id')), (SELECT get_id_from_table(11, 'product','product_id')), NOW()::timestamp, 1),
+       ((SELECT get_id_from_table(13, 'app_user','user_id')), (SELECT get_id_from_table(12, 'product','product_id')), NOW()::timestamp, 2),
+       ((SELECT get_id_from_table(15, 'app_user','user_id')), (SELECT get_id_from_table(13, 'product','product_id')), NOW()::timestamp, 3),
+       ((SELECT get_id_from_table(4, 'app_user','user_id')), (SELECT get_id_from_table(14, 'product','product_id')), NOW()::timestamp, 4),
+       ((SELECT get_id_from_table(3, 'app_user','user_id')), (SELECT get_id_from_table(15, 'product','product_id')), NOW()::timestamp, 5),
+       ((SELECT get_id_from_table(2, 'app_user','user_id')), (SELECT get_id_from_table(16, 'product','product_id')), NOW()::timestamp, 2);
+
